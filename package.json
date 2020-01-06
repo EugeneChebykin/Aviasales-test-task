@@ -16,6 +16,7 @@
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
+    "deploy": "gh-pages -d build",
     "eslint": "^6.1.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.8.0",
@@ -27,15 +28,16 @@
     "gh-pages": "^2.1.1",
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
-    "prettier": "^1.19.1",
-    "deploy": "gh-pages -d build",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "prettier": "^1.19.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "precommit": "lint-staged"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
