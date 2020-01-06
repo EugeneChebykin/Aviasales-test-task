@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Aviasales-test-task/static/css/main.fc33148e.chunk.css",
+    "main.js": "/Aviasales-test-task/static/js/main.cc0f1a11.chunk.js",
+    "main.js.map": "/Aviasales-test-task/static/js/main.cc0f1a11.chunk.js.map",
+    "runtime-main.js": "/Aviasales-test-task/static/js/runtime-main.e651761b.js",
+    "runtime-main.js.map": "/Aviasales-test-task/static/js/runtime-main.e651761b.js.map",
+    "static/js/2.1c5acb66.chunk.js": "/Aviasales-test-task/static/js/2.1c5acb66.chunk.js",
+    "static/js/2.1c5acb66.chunk.js.map": "/Aviasales-test-task/static/js/2.1c5acb66.chunk.js.map",
+    "index.html": "/Aviasales-test-task/index.html",
+    "precache-manifest.9f700658bc63c8c25bc4f500c3ff0028.js": "/Aviasales-test-task/precache-manifest.9f700658bc63c8c25bc4f500c3ff0028.js",
+    "service-worker.js": "/Aviasales-test-task/service-worker.js",
+    "static/css/main.fc33148e.chunk.css.map": "/Aviasales-test-task/static/css/main.fc33148e.chunk.css.map",
+    "static/js/2.1c5acb66.chunk.js.LICENSE": "/Aviasales-test-task/static/js/2.1c5acb66.chunk.js.LICENSE",
+    "static/media/logo.svg": "/Aviasales-test-task/static/media/logo.0c089234.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e651761b.js",
+    "static/js/2.1c5acb66.chunk.js",
+    "static/css/main.fc33148e.chunk.css",
+    "static/js/main.cc0f1a11.chunk.js"
+  ]
+}
