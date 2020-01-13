@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { SegmentContainer, Item, Title, Text } from './styles';
+import { getEndings } from '../../functions';
 
 const formatDate = val => {
   const date = new Date(val);
@@ -29,7 +30,7 @@ const Segment = props => {
         <Text>{getTimePeriod(duration)}</Text>
       </Item>
       <Item>
-        <Title>{`${stops.length} пересадки`}</Title>
+        <Title>{getEndings(stops.length, ['пересадка', 'пересадок', 'пересадки'])}</Title>
         <Text>{stops.join(', ')}</Text>
       </Item>
     </SegmentContainer>

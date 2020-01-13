@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { uniqueId } from 'lodash';
 import Segment from '../Segment';
 import { TicketContainer, Header, Logo } from './styles';
 
 const Ticket = props => {
   const { carrier, price, segments } = props;
-  const rows = segments.map(segment => <Segment key={uniqueId()} {...segment} />);
+  const [departure, destination] = segments;
   return (
     <TicketContainer>
       <Header>
@@ -19,7 +18,8 @@ const Ticket = props => {
           />
         </Logo>
       </Header>
-      {rows.length > 0 && rows}
+      <Segment key="1" {...departure} />
+      <Segment key="2" {...destination} />
     </TicketContainer>
   );
 };

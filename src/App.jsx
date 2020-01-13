@@ -44,11 +44,10 @@ class App extends Component {
 
   filterTickets = tickets => {
     const { filters } = this.state;
-    const byStops = (obj, count) => obj.segments.some(segment => segment.stops.length === count);
-    const activeFilters = filters.filter(item => item.isActive);
-    return activeFilters.reduce((acc, cur) => {
-      return [...acc, ...tickets.filter(item => byStops(item, cur.stops))];
-    }, []);
+    const activeStops = filters.filter(item => item.isActive).map(filter => filter.stops);
+    const byStops = (obj, stops) =>
+      obj.segments.every(segment => stops.includes(segment.stops.length));
+    return tickets.filter(ticket => byStops(ticket, activeStops));
   };
 
   getSearchKey = () => axios.get('https://front-test.beta.aviasales.ru/search');

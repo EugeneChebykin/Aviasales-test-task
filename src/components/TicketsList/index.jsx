@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { uniqueId } from 'lodash';
+import { genIdFromObjValues } from '../../functions';
 import Ticket from '../Ticket';
 import TicketsContainer from './styles';
 
 const TicketsList = props => {
   const { items, isLoading } = props;
-  const tickets = items.slice(0, 5).map(item => <Ticket key={uniqueId()} {...item} />);
+  const tickets = items.slice(0, 5).map(item => {
+    return <Ticket key={genIdFromObjValues(item)} {...item} />;
+  });
   return tickets.length > 0 || isLoading ? (
     <TicketsContainer>{tickets}</TicketsContainer>
   ) : (
