@@ -28,7 +28,6 @@
     "gh-pages": "^2.1.1",
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
-    "precommit": "lint-staged",
     "prettier": "^1.19.1"
   },
   "scripts": {
@@ -37,12 +36,12 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build",
-    "precommit": "lint-staged",
-    "eslint": "eslint src/ || true"
+    "eslint": "node_modules/.bin/eslint src/ --color --max-warnings=0",
+    "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,jsx}": [
-      "node_modules/.bin/eslint --max-warnings=0",
+    "src/**/*.{js,jsx}": [
+      "node_modules/.bin/eslint --color --max-warnings=0",
       "prettier --write",
       "git add"
     ]
